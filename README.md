@@ -1,9 +1,11 @@
 ## Project P3: Public pages
 
-#### We'd like to assess your ability to use modern frontend frameworks to build a super simple web app (with only one page).
-#### As an example, we'd like you to use Next.js to build a simple page that displays the information about a source.
+### Instructions
+We'd like to assess your ability to use modern frontend frameworks to build a super simple web app (with only one page).
+As an example, we'd like you to use Next.js to build a simple page that displays the information about a source.
 
-#### Why Next.js? Next.js is able to implement incremental static generation (ISG). This means that the page is built once and then cached. This is useful for pages that are not updated frequently and can be served from a cache without querying the database all the time, perfect for public facing pages.
+#### Why Next.js?
+Next.js is able to implement incremental static generation (ISG). This means that the page is built once and then cached. This is useful for pages that are not updated frequently and can be served from a cache without querying the database all the time, perfect for public facing pages.
 
 #### Here's the "fake" data that we want you to use:
 
@@ -20,8 +22,8 @@ const source = {
 };
 ```
 
-#### Ideally, to test the incremental static generation (ISG) feature, we'd like you to come up with one additional field to this fake data that would change at every rendering (so we can verify that your page does render). That can be as simply as a random number or counter.
+####
+Ideally, to test the incremental static generation (ISG) feature, we'd like you to come up with one additional field to this fake data that would change at every rendering (so we can verify that your page does render). That can be as simply as a random number or counter.
 
-#### We'd like the full data of a source to be downloadable as a JSON file. For that, make sure to add a **Download** button that triggers the download of a JSON file with the full data of the source.
-
-#### Once you are done, please upload the code to a public repository on GitHub and send us the link!
+####
+We'd like the full data of a source to be downloadable as a JSON file. For that, make sure to add a **Download** button that triggers the download of a JSON file with the full data of the source.
