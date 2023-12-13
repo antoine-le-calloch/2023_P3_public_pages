@@ -27,3 +27,6 @@ Ideally, to test the incremental static generation (ISG) feature, we'd like you 
 
 ####
 We'd like the full data of a source to be downloadable as a JSON file. For that, make sure to add a **Download** button that triggers the download of a JSON file with the full data of the source.
+
+### Getting Started
+	npm run dev
