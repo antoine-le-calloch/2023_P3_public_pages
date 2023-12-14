@@ -10,8 +10,7 @@ const source = {
     dec: 0.0,
     redshift: 0.0,
     summary: 'This is a fake source, bla bla bla',
-    cutouts: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fweb.ipac.caltech.edu%2Fstaff%2Ffmasci%2Fztf%2Fmasci_pasadena_05.04.18.pdf&psig=AOvVaw3gqvPQ6B8KclpZOIQHVOw-&ust=1702258106371000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNiit-Dbg4MDFQAAAAAdAAAAABAI',
-    // feel free to use any image if you can't access the link above, it's just a placeholder image
+    cutouts: '/cutouts.png',
 };
 
 export default function Home() {
@@ -57,7 +56,53 @@ export default function Home() {
                     </div>
                 </div>
             </header>
-
+            <div className={styles.source}>
+                <div> {/* Source Title */}
+                    <h1 className={styles.title}>{source.id}</h1>
+                </div>
+                {/* Summary */}
+                <div className={styles.sourceField}>
+                    <h2>Summarize:</h2>
+                    <div>
+                        <p>
+                            {source.summary}
+                        </p>
+                    </div>
+                </div>
+                {/* redshift */}
+                <div className={styles.sourceField}>
+                    <h2>Redshift:</h2>
+                    <div className={styles.number}>
+                        <p>{source.redshift.toFixed(1)}</p>
+                    </div>
+                </div>
+                {/* ra */}
+                <div className={styles.sourceField}>
+                    <h2>RA:</h2>
+                    <div className={styles.number}>
+                        <p>{source.ra.toFixed(1)}</p>
+                    </div>
+                </div>
+                {/* dec */}
+                <div className={styles.sourceField}>
+                    <h2>DEC:</h2>
+                    <div className={styles.number}>
+                        <p>{source.dec.toFixed(1)}</p>
+                    </div>
+                </div>
+                {/* cutouts */}
+                <div className={styles.cutouts}>
+                    <h2>Cutouts</h2>
+                    <div>
+                        <Image
+                            src={source.cutouts}
+                            alt="Cutouts"
+                            width={600}
+                            height={375}
+                        />
+                    </div>
+                    </div>
+                </div>
         </main>
-    )
+)
 }
