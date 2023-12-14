@@ -1,95 +1,63 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faBars} from '@fortawesome/free-solid-svg-icons';
+
+const source = {
+    objectID: 'ZTF21aaqjyho',
+    id: 'ZTF21aaqjyho',
+    ra: 0.0,
+    dec: 0.0,
+    redshift: 0.0,
+    summary: 'This is a fake source, bla bla bla',
+    cutouts: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fweb.ipac.caltech.edu%2Fstaff%2Ffmasci%2Fztf%2Fmasci_pasadena_05.04.18.pdf&psig=AOvVaw3gqvPQ6B8KclpZOIQHVOw-&ust=1702258106371000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNiit-Dbg4MDFQAAAAAdAAAAABAI',
+    // feel free to use any image if you can't access the link above, it's just a placeholder image
+};
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    return (
+        <main className={styles.main}>
+            <header className={styles.header}>
+                <div className={styles.headerLeftPart}>
+                    <div>
+                        <FontAwesomeIcon
+                            className={styles.openToolBar}
+                            icon={faBars}/>
+                    </div>
+                    <div>
+                        <Image
+                            src="/GROWTH_logo.png"
+                            alt="Growth Logo"
+                            width={52}
+                            height={50}
+                            priority
+                        />
+                    </div>
+                    <div className={styles.lineBetweenLogos}></div>
+                    <div>
+                        <Image
+                            src="/skyportal_logo_dark.png"
+                            alt="Skyportal Logo"
+                            width={52}
+                            height={50}
+                            priority
+                        />
+                    </div>
+                    <div className={styles.websiteName}>
+                        <a
+                            href="/"
+                        >Fritz</a>
+                    </div>
+                </div>
+                <div className={styles.headerRightPart}>
+                    <div className={styles.actualAccount}>
+                        <p className={styles.accountName}>
+                            AL
+                        </p>
+                    </div>
+                </div>
+            </header>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+        </main>
+    )
 }
