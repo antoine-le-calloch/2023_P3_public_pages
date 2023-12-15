@@ -26,7 +26,7 @@ const source = {
 Ideally, to test the incremental static generation (ISG) feature, we'd like you to come up with one additional field to this fake data that would change at every rendering (so we can verify that your page does render). That can be as simply as a random number or counter.
 
 ####
-We'd like the full data of a source to be downloadable as a JSON file. For that, make sure to add a **Download** button that triggers the download of a JSON file with the full data of the source.
+We'd like the full data of a source to be downloadable as a JSON file. For that, make sure to add a **Download** button that triggers the downloadButton of a JSON file with the full data of the source.
 
 ### Getting Started
 	npm run dev
