@@ -4,20 +4,9 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMobileScreen} from "@fortawesome/free-solid-svg-icons";
 import {faStar} from "@fortawesome/free-regular-svg-icons";
 import Image from "next/image";
-import DownloadButton from "@/app/components/DownloadButton";
+import DownloadButton from "@/components/DownloadButton";
 
-const Source = () => {
-    const source = {
-        objectID: 'ZTF21aaqjyho',
-        id: 'ZTF21aaqjyho',
-        ra: 0.0,
-        dec: 0.0,
-        redshift: 0.0,
-        summary: 'This is a fake source, bla bla bla',
-        cutouts: '/images/cutouts.png',
-        updateDate: new Date().toLocaleString(),
-    };
-
+function Source ({ source }) {
     return (
         <div className={styles.source}>
             <div className={styles.sourceTitleAndDate}>
@@ -26,7 +15,7 @@ const Source = () => {
                     <FontAwesomeIcon
                         className={styles.sourceTitleIconPhone}
                         icon={faMobileScreen}/>
-                    {/*<h1>{source.id}</h1>*/}
+                    <h1>{source.id}</h1>
                     <FontAwesomeIcon
                         className={styles.sourceTitleIconStar}
                         icon={faStar}/>
@@ -81,6 +70,7 @@ const Source = () => {
             <DownloadButton source={source}/>
         </div>
     );
-};
+}
 
 export default Source;
+

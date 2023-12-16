@@ -33,7 +33,7 @@ const Header = ({  }) => {
                 </div>
                 <div className={styles.websiteName}>
                     <a
-                        href="/"
+                        href="/public"
                     >Fritz</a>
                 </div>
             </div>
