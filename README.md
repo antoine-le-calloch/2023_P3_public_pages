@@ -40,3 +40,7 @@ Build the application
 Start it
 
   	npm start
+
+Or execute it in dev mode
+
+  	npm run dev
