@@ -40,3 +40,10 @@ Build the application
 Start it
 
   	npm start
+
+Or execute it in dev mode
+
+  	npm run dev
+
+##### note :
+I added a revalidation of the page of 20s, this makes it an ISR (Incremental Static Regeneration). So every 20s the next refresh will update the cached page. The following refresh will display the page with the update value.
