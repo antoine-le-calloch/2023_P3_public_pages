@@ -3,11 +3,13 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 
+// Header component
 const Header = ({  }) => {
     return (
         <header className={styles.header}>
             <div className={styles.headerLeftPart}>
                 <div>
+                    {/* Open tab icon */}
                     <FontAwesomeIcon
                         className={styles.openToolBar}
                         icon={faBars}/>
@@ -21,6 +23,7 @@ const Header = ({  }) => {
                         priority
                     />
                 </div>
+                {/* Separation between logos */}
                 <div className={styles.lineBetweenLogos}></div>
                 <div>
                     <Image
@@ -31,13 +34,15 @@ const Header = ({  }) => {
                         priority
                     />
                 </div>
+                {/* Site title */}
                 <div className={styles.websiteName}>
                     <a
-                        href="/public"
+                        href="/"
                     >Fritz</a>
                 </div>
             </div>
             <div className={styles.headerRightPart}>
+                {/* Account name */}
                 <div className={styles.actualAccount}>
                     <p className={styles.accountName}>
                         AL

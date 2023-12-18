@@ -73,4 +73,3 @@ function Source ({ source }) {
 }
 
 export default Source;
-

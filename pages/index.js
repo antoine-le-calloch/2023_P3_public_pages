@@ -1,7 +1,9 @@
 import Source from "@/components/Source";
 import RootLayout from "@/components/layout";
 
+// This function gets called at build time on server-side
 export async function getStaticProps() {
+    // the source data
     const data = {
         objectID: 'ZTF21aaqjyho',
         id: 'ZTF21aaqjyho',
@@ -17,6 +19,7 @@ export async function getStaticProps() {
         props: {
             source: data,
         },
+        // The data will be revalidate every 20s
         revalidate: 20,
     };
 }
